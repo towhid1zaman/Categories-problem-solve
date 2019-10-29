@@ -1,1 +1,58 @@
+***Binary search
+int bs(vector<int>&num,int target)
+{
+   if(num.size()==0){
+	return -1;
+	}
+  int left = 0, right = num.size() - 1;
+ while(left<=right){
+  int mid = left+(right-left)/2;
+  if(num[mid]==target){
+	return mid;
+	}
+  else if(num[mid]<target){
+	left = mid+1;
+	}
+  else{
+         right = mid - 1;	
+      }
+  }
 
+  return -1;
+}
+-------------------------
+*****finding x<=element ind..
+https://codeforces.com/contest/600/problem/B
+
+int bs(vector<int>&num,int target)
+{
+  int left = 0, right = num.size() - 1;
+  int ans = -1;
+ while(left<=right){
+  int mid = left+(right-left)/2;
+  if(num[mid]<=target){
+        ans=mid;
+        left = mid+1;
+	}
+  else{
+         right = mid - 1;
+      }
+  }
+    return ans;
+}
+*****or using upper bound
+int id = upper_bound(a.begin(), a.end(), x) - a.begin();
+----------------------
+
+
+***upper bound (it returns strictly (<x) index of a sorted array)
+
+int index = upper_bound(a.begin(), a.end(), x) - a.begin();
+
+
+-----------------------------------
+
+***lower bound(it returns first (<=x) index of a sorted array-
+
+int index = lower_bound(a.begin(), a.end(), x) - a.begin();
+---------------------------------------
