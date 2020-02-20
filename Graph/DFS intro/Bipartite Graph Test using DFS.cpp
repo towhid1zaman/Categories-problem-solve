@@ -51,7 +51,16 @@ int main(){
             int u,v; cin >> u >> v;
             adj[u].pb(v),adj[v].pb(u);
         }
-        if(dfs(1,0)){
+        bool f =  true;
+                for(int i = 1; i<=node; i++){
+                    if(vis[i]==0){
+                        bool ans = dfs(i,0);
+                        if(ans==false){
+                            f = false;
+                        }
+                    }
+                }
+        if(f){
             cout<<"Yes its a Bipartite Graph :D "<<endl;
         }
         else  cout<<"Opss! its not a bipartite graph "<<endl;
