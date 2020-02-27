@@ -98,7 +98,6 @@ void bfs(int src){
 }
 int main(){
         _ios;
-
         buildgraph();
         int T; cin >> T;
         while(T--){
