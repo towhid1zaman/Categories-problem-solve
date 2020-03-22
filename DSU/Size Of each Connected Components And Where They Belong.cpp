@@ -41,7 +41,7 @@ int Find(int x){
 void Union(int a, int b){
     int x = Find(a);
     int y = Find(b);
-    p[y] = Find(x);
+    p[y] = x;
 
     if(Size[x]>=Size[b]){
         Size[x]+=Size[b];
