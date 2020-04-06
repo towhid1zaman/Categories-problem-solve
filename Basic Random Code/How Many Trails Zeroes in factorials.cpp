@@ -1,3 +1,5 @@
+//https://shikhorroy.wordpress.com/2013/02/11/wp-mep2mliv-28/
+
 #include "bits/stdc++.h"
 using namespace std;
 typedef long long ll;
