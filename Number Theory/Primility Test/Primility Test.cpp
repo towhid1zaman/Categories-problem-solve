@@ -28,7 +28,7 @@ typedef vector<int> vi;typedef vector<ll> vll;
 const double pi = acos(-1.0);
 const int mod = 1000000007; // (int)1e9+7
 const int maxn = 2000100;
-
+//process 1
 bool isPrime(ll n){
         if(n==2){
             return true;
@@ -42,6 +42,18 @@ bool isPrime(ll n){
             }
         }
         return true;
+}
+//process 2
+bool prime(ll n)
+{
+    if(n<=1)return false;
+    if(n<=3)return true;
+    if(n%2==0||n%3==0)return false;
+    for(ll i=5;i*i<=n;i+=6)
+    {
+        if(n%i==0||n%(i+2)==0)return false;
+    }
+    return true;
 }
 
 int main(){
