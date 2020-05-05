@@ -44,17 +44,15 @@ void dfs(int node){
 int main(){
         _ios;
         int n,m;
-        while(cin >> n >> m){
-                if(n==0 and m==0)break;
-                for(int i = 0; i<=n; i++){
-                    adj[i].clear();
-                    vis[i]=0;
-                }
-                res.clear();
+        cin >> n >> m;
+        for(int i = 0; i<=n; i++){
+            adj[i].clear();
+            vis[i]=0;
+        }
+        res.clear();
         for(int i = 0; i<m; i++){
             int u,v; cin >> u >> v;
             adj[u].push_back(v);
-            //adj[v].push_back(u);
         }
 
         for(int i= 1; i<=n; i++){
@@ -67,8 +65,6 @@ int main(){
             cout<<x<<' ';
         }
         cout<<endl;
-
-    }
 
 return 0;
 }
