@@ -167,7 +167,7 @@ return 0;
 }
 
 /*
-    why we use orderset istead of set
+    why we use orderset instead of set
 
     because of order_by_key() and find_by_order(), they are not included in set
 
