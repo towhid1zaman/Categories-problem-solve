@@ -9,6 +9,16 @@
 using namespace std;
 typedef long long ll;
 
+/*
+    //string getline process,
+    string  s;
+    cin >> ws; 
+    /// getline leaves whitespaces where they are if they don't fit in the line
+    // cin >> ws will discard those
+    getline(cin, s);
+
+
+*/
 ///count something from A string
 int cnt(string A, char n){
     int res = count(A.begin(), A.end(), 'n');
