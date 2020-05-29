@@ -16,6 +16,7 @@ int main(){
     }
    }
    cout<<n<<endl;
-   cout<<"SUM"<<res<<endl;
+   res+=n;
+   cout<<"SUM "<<res<<endl;
 
 }
