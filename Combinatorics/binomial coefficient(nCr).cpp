@@ -1,3 +1,6 @@
+/*
+nCr = (n!/(k!*(n-k)!)
+*/
 
 // </> : towhid1zaman
 
