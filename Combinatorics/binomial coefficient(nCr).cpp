@@ -1,5 +1,5 @@
 /*
-nCr = (n!/(k!*(n-k)!)
+nCr = (n!/(r!*(n-r)!)
 */
 
 // </> : towhid1zaman
