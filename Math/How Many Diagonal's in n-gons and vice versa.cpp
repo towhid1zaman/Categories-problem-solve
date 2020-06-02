@@ -24,6 +24,7 @@ how many diagonal in n-gons = n*(n-3)/2 ;
 if we cant do its opposite we can find gon's 
     
     its just ax^2+bx+c=0 formula.
+    x = -b+sqrt(b^2 - 4ac) / 2a // taking positive
     see, n*(n-3)/2 = c(its given)
             => n^-3n - 2c = 0
 
