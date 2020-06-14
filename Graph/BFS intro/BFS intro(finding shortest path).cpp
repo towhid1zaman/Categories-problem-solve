@@ -1,62 +1,103 @@
+
+// </> : towhid1zaman
+
 #include "bits/stdc++.h"
 using namespace std;
-#define ll long long
-vector<int>edgelist[200005];
-int d[200005];
+typedef long long ll;
+#define _ ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define endl "\n"
+
+const int maxn = 100100;
+
+vector<int>adj[maxn];
+int dist[maxn];
+int par[maxn];
+bool vis[maxn];
+
 void bfs(int s){
-    memset(d,-1,sizeof(d));
-    d[s] = 0;
+
     queue<int>q;
     q.push(s);
-    while(q.size()>0){
+    vis[s] = 1;
+    par[s] = s;
+    dist[s] = 0;
+
+    while(!q.empty()){
         int u = q.front();
         q.pop();
-        for(int i = 0; i<edgelist[u].size();i++){
-            int v = edgelist[u][i];
-            if(d[v]==-1){
-                d[v] = d[u] + 1;
+
+        for(int i = 0; i<adj[u].size(); i++){
+            int v = adj[u][i];
+            if(!vis[v]){
+                vis[v] = 1;
+                par[v] = u;
+                dist[v] = dist[u] + 1;
                 q.push(v);
             }
         }
     }
 
 }
-int main()
-{
-    int edge,node;
-    cin>>edge>>node;
-    for(int i = 1;i<=edge;i++)
-    {
-        int u,v;
-        cin>>u>>v;
-        edgelist[u].push_back(v);
-        edgelist[v].push_back(u); /// not need if directed
-        /// because of undirected graph
-    }
-    int source;
-    cin>>source;
-    bfs(source);
 
-    cout<<"Shortest Path From source to every node: "<<endl;
-    for(int i = 1; i<=node;i++){
-        cout<<d[i]<<" ";
-    }
-    cout<<endl;
+
+int main(){
+        _
+        int node, edges; cin >> node >> edges;
+        for(int i = 1; i<=edges; i++){
+            int u,v; cin >> u >> v;
+            adj[u].push_back(v);
+            adj[v].push_back(u);
+        }
+        int source; cin >> source;
+        int target; cin >> target;
+        bfs(source);
+        vector<int>path;
+        for(int i = target; i!=source; i = par[i]){
+            path.push_back(i);
+        }
+        path.push_back(source);
+
+        reverse(path.begin(), path.end());
+
+        // printing all distance from source node
+        for(int i = 1; i<=node; i++){
+            cout<<"From " <<source<<" Node to "<<i << " Distance is "<<dist[i]<<endl;
+        }cout<<endl;
+        //printing path
+
+        cout <<"path from source to distance "<<endl;
+        for(int i = 0; i<path.size(); i++){
+            cout<<path[i]<<' ';
+        }cout<<endl;
+
 
 return 0;
 }
-
 /*
-8 7
+10 11
 1 2
+1 7
 1 6
 2 3
-2 4
-2 5
-3 6
-3 7
-6 7
-3
+3 4
+4 6
+4 5
+7 8
+8 9
+9 6
+9 10
+1
+10
 
+expected output:
+1 0
+2 1
+3 2
+4 2
+5 3
+6 1
+7 1
+8 2
+9 2
+10 3
 */
-
