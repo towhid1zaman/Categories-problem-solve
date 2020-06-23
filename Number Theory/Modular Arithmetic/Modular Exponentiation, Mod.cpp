@@ -18,7 +18,11 @@ ll mod_inverse(ll a)
 {
 	return bxpo(a , mod-2);
 }
-
+inline ll MOD(ll x)
+{
+    ll y = x % mod;
+    return (y >= 0) ? y: y+mod; // if -ve, simply add M
+}
 int main()
 {
     ll n,x;
