@@ -1,4 +1,3 @@
-
 // </> : towhid1zaman
 
 #include "bits/stdc++.h"
@@ -53,7 +52,7 @@ void seive()
 vector<ll>rPrime;  //final result
 void segmented(ll L, ll R)
 {
-    bool isPrime[L+R-1];
+    bool isPrime[R-L+1];
     memset(isPrime,true,sizeof(isPrime));
     if(L==1){
         isPrime[0] = false;
@@ -93,4 +92,3 @@ int main(){
 
 return 0;
 }
-
