@@ -39,8 +39,8 @@ void task(){
     for(int i = 0; i<n; i++)cin>> wt[i];
     for(int i = 0; i<n; i++) cin >> val[i];
 
-    for(int i = 1; i<=n; i++){
-        for(int j = 1; j<=w;j++){
+    for(int i = 1; i<=n; i++){//weight
+        for(int j = 1; j<=w;j++){//capacity
             if(wt[i-1]<=j){
                 dp[i][j] = max( val[i-1] + dp[i-1][j-wt[i-1]], dp[i-1][j]);
             }
