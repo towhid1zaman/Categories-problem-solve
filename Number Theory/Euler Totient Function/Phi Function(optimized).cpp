@@ -30,19 +30,24 @@ const int mod = 1000000007; // (int)1e9+7
 const int maxn = 2000100;
 
 ll phi[maxn];
-
-void phiGen(int n){
-    for(int i = 1; i<=n; i++){
-        phi[i] = i;
-    }
-    for(int p = 2; p<=n; p++){
-        if(phi[p]==p){
+void phiGen(){
+    for(int p = 2; p<=maxn; p++){
+        if(!phi[p]){
             phi[p] = p-1;
-            for(int i=2*p; i<=n; i+=p){
-                phi[i] = (phi[i]/p)*(p-1);
+            for(int i=2*p; i<=maxn; i+=p){
+                if(!phi[i])phi[i]=i;
+                phi[i]/=p;
+                phi[i] *=(p-1);
             }
         }
     }
+    //for range a to b
+    /*
+    for(int i = 2; i<maxn;i++){
+        phi[i]*=phi[i];
+        phi[i]+=phi[i-1];
+    }
+    */
 }
 
 int main(){
