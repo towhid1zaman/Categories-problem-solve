@@ -13,7 +13,8 @@ typedef long long ll;
 
 void task(){
     
-    //priority_queue<int, std::vector<int> , greater<int> > Q; // small value first
+    //priority_queue<int, std::vector<int> , greater<int> > Q; // small value first [ another one, we can always use negative value to make them small order
+    // small example :https://github.com/towhid1zaman/Different_OnlineJudge_Solutions/blob/master/UVA_Solutions/DS/Argus%20UVA%20-%201203%20.cpp
      
     priority_queue<int> Q; // greater value first
     int n; cin >> n;
