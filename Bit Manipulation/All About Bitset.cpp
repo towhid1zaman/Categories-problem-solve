@@ -96,6 +96,7 @@ int Remove_lastBit(int n){
 /*Check ith bit is set or not
  *Given a number, check the ith bit is 1 or not.
  * means ith position of binary representation is 1 or 0
+ * 13 = 1101(3rd,2nd,1st,0th position)
  */
 bool ithBit_SetOrNot(int N, int i){
 	if( N & (1 << i) )
@@ -104,10 +105,31 @@ bool ithBit_SetOrNot(int N, int i){
         return false;
 }
 
+/*change ith bit of a number
+ *let n = 13 = 1101
+ *			 = 0010(mask of 1th bit (1<<1))
+ *-------------------------------------
+ *		(xor)=1111 (result , after change 1st bit)
+ */
+ int changeithBit(int n, int i){
+ 	return (n^(1<<i));
+ }
+
+ /* Given a number , check it is power of 2 or not
+  * let n = 8, it is a power of two number, 
+  * we can write, 8 = 2^3
+  */
+
+ bool PowerOfTwo(int n){
+ 	return (n && !(n&(n-1)));
+ }
+
 void task(){
 	int n; cin >> n;
 	int i; cin >> i;
 	cout << ithBit_SetOrNot(n,i) << endl;
+	cout << changeithBit(n,i) << endl;
+	cout << PowerOfTwo(n)<<endl;
 }
 
 int main(){
