@@ -7,7 +7,8 @@
 #pragma GCC target("avx,avx2,fma") 
 #include "bits/stdc++.h"
 using namespace std;
-
+template<typename T>
+using minpq = priority_queue<T, vector<T>, greater<T>>;  //minPQ
 typedef long long ll;
 
 
