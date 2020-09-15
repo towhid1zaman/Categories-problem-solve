@@ -1,5 +1,3 @@
-//Farthest Nodes in a Tree LightOJ - 1094 
-
 
 // </> : towhid1zaman
 
@@ -99,8 +97,6 @@ void task(){
 	for(int i = 0; i<n; i++){
 		if(dist[i]>mx_dist){
 			mx_dist = dist[i];
-			mx_dist = dist[i];
-
 		}
 	}
 	cout <<"Case "<<cs++<<": "<<mx_dist<<endl;
