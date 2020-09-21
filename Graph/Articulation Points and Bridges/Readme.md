@@ -1,7 +1,7 @@
 # Articulation Point
  **Basic Definition : From an undirected graph if we remove some node or vertices with their edeges and then the connected components are increaces then we call this node Articulation point** 
- 
- Articulation point using tarjan algorithm
+
+Articulation point using tarjan algorithm:
  
  **some steps:**
  
@@ -22,4 +22,18 @@
  
  Back edge never be a bridges.
  
+ 
+ # Bridges
+ **Basic Definition : From an undirected graph if we remove some edges and then the connected components are increaces then we call this node Bridges or Articulation edges**
+
+
+ Articulation edges/Bridges using tarjan algorithm:
+ * Conditions for AP,
+ * visitTime of node < lowtime of any adjecent node
+ * 
+ * lowTime Updation,
+ * lowTime[v] = min(lowTime[v], lowTime[to])
+ *
+ * When Back edge exist,
+ * lowTime[v] = min( lowTime[v], visitTime[to])
  
