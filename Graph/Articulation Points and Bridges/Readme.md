@@ -20,4 +20,6 @@
  
  Basically an edge that create a cycle then its called a back edge. Back edge connect a node to his ancestor, which isnot directly his parent.
  
+ Back edge never be a bridges.
+ 
  
