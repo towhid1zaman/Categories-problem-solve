@@ -24,7 +24,7 @@ Articulation point using tarjan algorithm:
  
  
  # Bridges
- **Basic Definition : From an undirected graph if we remove some edges and then the connected components are increaces then we call this node Bridges or Articulation edges**
+ **Basic Definition : From an undirected graph if we remove some edges and then the connected components are increaces then we call this edges Bridges or Articulation edges**
 
 
  Articulation edges/Bridges using tarjan algorithm:
