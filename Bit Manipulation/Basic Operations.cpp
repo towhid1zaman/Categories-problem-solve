@@ -62,6 +62,16 @@ void swap(int a, int b){
  *__builtin_popcountl = long int
  *__builtin_popcountll = long long
 */
+
+//Counts the leading number of zeros of the integer(long/long long).
+/*
+Ex- int x=16;       // 00000000 00000000 00000000 00010000 (32 bits)
+      cout<<__builtin_clz(x)<<endl;   //returns 27.
+ */
+ll LZ(ll x){
+	return __builtin_clz(x);
+}
+
 int CountSet(int n){
 	//return __builtin_popcount(n);
 	int ans = 0;
