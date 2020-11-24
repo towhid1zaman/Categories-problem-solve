@@ -134,6 +134,15 @@ bool ithBit_SetOrNot(int N, int i){
  	return (n && !(n&(n-1)));
  }
 
+/*n &-n returns the rightmost 1 bit in n.
+ *(10000100) = 100
+ *(10010) = 10
+ *(1000) = 1000
+ */
+int rightmost(int n){
+	return n&-n;
+}
+
 void task(){
 	int n; cin >> n;
 	int i; cin >> i;
