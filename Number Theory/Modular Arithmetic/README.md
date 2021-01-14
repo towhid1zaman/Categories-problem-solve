@@ -35,5 +35,6 @@
   x%m, if m<x then result always m
 
 - (a-b)%m is equvalent to a==b (mod m)
-- that means if we have to check some pair defernce mod m, then that pairs number has separately same remainder devide by m , a%m == b%m if (a-b)%m == 0
+- that means if we have to check some pair defernce mod m, then that pairs number has separately same remainder devide by m , 
+a%m == b%m if (a-b)%m == 0
 problems:https://codeforces.com/contest/876/problem/B
