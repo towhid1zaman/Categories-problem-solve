@@ -39,3 +39,5 @@
 a%m == b%m if (a-b)%m == 0
 
 problems:https://codeforces.com/contest/876/problem/B
+
+- y%x == y - y/x * x (remainder)
