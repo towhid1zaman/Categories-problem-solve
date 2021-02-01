@@ -16,6 +16,12 @@ void Build(int n){
 	for(int i = 1; i<=n; i++){
 		pref[i] = pref[i-1]+arr[i];
 	}
+	/*
+	Alternatively, we can write(Built in function)
+	vector<int> prefix = a;
+	partial_sum(prefix.begin(), prefix.end(), prefix.begin());
+	The prefix sum would be stored in the vector prefix
+	*/
 }
 
 ll Query(int left, int right){
