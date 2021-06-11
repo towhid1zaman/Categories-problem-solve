@@ -22,14 +22,19 @@ int go(int b, int e){
 void task(){
     cin >> s;
     int ans = 0;
+    string ans_str = "";
     for(int i = 0; i<(int)s.size(); i++){
+        string b;b.clear();
         for(int j = i; j<(int)s.size(); j++){
+            b.push_back(s[j]);
             if(go(i, j)){
+                if(ans_str.size() < b.size())ans_str = b;
                 ans = max(ans, j-i+1);
             }
         }
     }
     cout << ans << endl;
+    cout << ans_str << endl;
 }
 
 int main(){
