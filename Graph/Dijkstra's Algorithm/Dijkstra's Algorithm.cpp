@@ -32,7 +32,6 @@ namespace Dijkstra_Path{
             }
         }
     }
-
     bool is_reached(int n){
         return dist[n] == inf;
     }
