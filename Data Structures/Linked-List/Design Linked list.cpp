@@ -30,7 +30,9 @@ class MyLinkedList {
         return p->val;
     }
     
-    /** Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list. */
+    /** Add a node of value val before the first element of the linked list.
+    After the insertion, the new node will be the first node of the linked list. */
+    
     void addAtHead(int val) {
         SinglyListNode *p = new SinglyListNode(val);
         p->next = head;
@@ -50,7 +52,9 @@ class MyLinkedList {
         if (length == 1) head = tail; 
     }
     
-    /** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
+    /** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, 
+    the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
+    
     void addAtIndex(int index, int val) {
         if (index > length)
             return;
