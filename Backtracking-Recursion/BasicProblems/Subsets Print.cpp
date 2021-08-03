@@ -1,7 +1,7 @@
 
 /*
     Given an integer array nums of unique elements, return  all possible subsets (the power set).
-    total subsets = 2^N
+    total subsets = (B*(N+1))/2;
 
 */
 
