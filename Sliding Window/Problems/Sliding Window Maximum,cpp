@@ -1,0 +1,20 @@
+//https://leetcode.com/problems/sliding-window-maximum/
+class Solution {
+public:
+    vector<int> maxSlidingWindow(vector<int>& a, int k) {
+        multiset<int>m;
+        vector<int>ans;
+        
+        int startPos = 0;
+        for(int endPos = 0; endPos < (int)a.size(); endPos++){
+            m.insert(a[endPos]);
+            if(endPos - startPos + 1 == k){
+                auto it = m.end();
+                ans.push_back(*(--it));
+                m.erase( m.find(a[startPos]) );
+                startPos++;
+            }
+        }
+        return ans;
+    }
+};
