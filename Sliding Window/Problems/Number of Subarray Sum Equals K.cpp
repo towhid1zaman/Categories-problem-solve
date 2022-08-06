@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/binary-subarrays-with-sum/
 class Solution {
 public:
     int subarraySum(vector<int>& nums, int k) {
