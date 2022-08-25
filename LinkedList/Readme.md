@@ -1,5 +1,4 @@
-
-2. Add Two Numbers
+1. Add Two Numbers
 https://leetcode.com/problems/add-two-numbers/
 19. Remove Nth Node From End of List
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
