@@ -16,8 +16,20 @@ https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
 00. Remove Duplicates from Unsorted linked list
 https://practice.geeksforgeeks.org/problems/remove-duplicates-from-an-unsorted-linked-list/1
+206. Reverse Linked List
+https://leetcode.com/problems/reverse-linked-list/
 92. Reverse Linked List II
 https://leetcode.com/problems/reverse-linked-list-ii/
+25. Reverse Nodes in k-Group
+https://leetcode.com/problems/reverse-nodes-in-k-group/
+001. K reverse linked list
+https://www.interviewbit.com/problems/k-reverse-linked-list/
+002. Reverse Alternate K Nodes
+https://www.interviewbit.com/problems/reverse-alternate-k-nodes/
+004. Even Reverse
+https://www.interviewbit.com/problems/even-reverse/
+003. Kth Node From Middle
+https://www.interviewbit.com/problems/kth-node-from-middle/
 138. Copy List with Random Pointer
 https://leetcode.com/problems/copy-list-with-random-pointer/
 141. Linked List Cycle
@@ -28,8 +40,6 @@ https://leetcode.com/problems/linked-list-cycle-ii/
 https://leetcode.com/problems/intersection-of-two-linked-lists/
 203. Remove Linked List Elements
 https://leetcode.com/problems/remove-linked-list-elements/
-206. Reverse Linked List
-https://leetcode.com/problems/reverse-linked-list/
 234. Palindrome Linked List
 https://leetcode.com/problems/palindrome-linked-list/
 237. Delete Node in a Linked List
@@ -46,3 +56,9 @@ https://leetcode.com/problems/middle-of-the-linked-list/
 https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
 1290. Convert Binary Number in a Linked List to Integer
 https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
+148. Sort List
+https://leetcode.com/problems/sort-list/
+86. Partition List
+https://leetcode.com/problems/partition-list/
+147. Insertion Sort List
+https://leetcode.com/problems/insertion-sort-list/
