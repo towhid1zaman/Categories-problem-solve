@@ -1,3 +1,5 @@
+Need to learn before solving any linkedlist problem: Reverse, Slow and fast Pointer, Merge two nodes
+
 1. Add Two Numbers
 https://leetcode.com/problems/add-two-numbers/
 19. Remove Nth Node From End of List
