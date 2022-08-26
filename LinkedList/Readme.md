@@ -4,12 +4,18 @@ https://leetcode.com/problems/add-two-numbers/
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 21. Merge Two Sorted Lists
 https://leetcode.com/problems/merge-two-sorted-lists/
+143. Reorder List
+https://leetcode.com/problems/reorder-list/
 24. Swap Nodes in Pairs
 https://leetcode.com/problems/swap-nodes-in-pairs/
 61. Rotate List
 https://leetcode.com/problems/rotate-list/
 83. Remove Duplicates from Sorted List
 https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+82. Remove Duplicates from Sorted List II
+https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/
+00. Remove Duplicates from Unsorted linked list
+https://practice.geeksforgeeks.org/problems/remove-duplicates-from-an-unsorted-linked-list/1
 92. Reverse Linked List II
 https://leetcode.com/problems/reverse-linked-list-ii/
 138. Copy List with Random Pointer
@@ -36,5 +42,7 @@ https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/
 https://leetcode.com/problems/design-linked-list/
 876. Middle of the Linked List
 https://leetcode.com/problems/middle-of-the-linked-list/
+2095. Delete the Middle Node of a Linked List
+https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
 1290. Convert Binary Number in a Linked List to Integer
 https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
