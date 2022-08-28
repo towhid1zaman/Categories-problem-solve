@@ -10,3 +10,5 @@ https://leetcode.com/problems/maximum-subarray/
 https://leetcode.com/problems/find-all-duplicates-in-an-array/
 1329. Sort the Matrix Diagonally
 https://leetcode.com/problems/sort-the-matrix-diagonally/
+498. Diagonal Traverse
+https://leetcode.com/problems/diagonal-traverse/
