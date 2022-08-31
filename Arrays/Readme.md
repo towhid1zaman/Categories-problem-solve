@@ -12,3 +12,5 @@ https://leetcode.com/problems/find-all-duplicates-in-an-array/
 https://leetcode.com/problems/sort-the-matrix-diagonally/
 498. Diagonal Traverse
 https://leetcode.com/problems/diagonal-traverse/
+1424. Diagonal Traverse II
+https://leetcode.com/problems/diagonal-traverse-ii/
