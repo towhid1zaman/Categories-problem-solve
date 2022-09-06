@@ -47,3 +47,5 @@ https://leetcode.com/problems/koko-eating-bananas/
 https://leetcode.com/problems/super-egg-drop/
 1103. Distribute Candies to People
 https://leetcode.com/problems/distribute-candies-to-people/
+719. Find K-th Smallest Pair Distance
+https://leetcode.com/problems/find-k-th-smallest-pair-distance/
