@@ -29,8 +29,15 @@ public:
             sort(rightSub.begin(), rightSub.end());
  
             for(auto &a:left[i]){   
-                int b = (totalSum - 2*a)/2;                     //To find appropriate sum b of subset of i n-i
-                auto itr = lower_bound(rightSub.begin(), rightSub.end(), b);  //We use binary search in right half vector
+                int b = (totalSum - 2*a)/2;
+                /*
+                     total = 2(a + b) // a = from left part, b = from right part {a+b == n size}
+                  => total = 2a + 2b
+                  => 2b = total - 2a
+                  => b = (total - 2a)/2
+
+                */
+                auto itr = lower_bound(rightSub.begin(), rightSub.end(), b);
                 if(itr != rightSub.end()){
                     b = *itr;
                     ans = min(ans, abs(totalSum - 2*(a + b)));
