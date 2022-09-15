@@ -1,49 +1,70 @@
+/***
+* Maximum size of array could be 2*15 = 30
+* Total subset (2^n)-1 = (2^30) - 1 = 1073741823, this is huge
+* So, we cant't generate all subset sum at the same time. We can separate whole array into two part.
+* Then We can generate subset sum and store all subset sum according to their size.
+* Subset Sum will store into 2D vector, each subarray size their sum will be store their.
+* 
+* First, take total sum of whole array, totalSum = sumOf(Array's elements)
+* Now, traverse the left part, then for each subsetSize vectors element lets say it 'a', 
+* for 'a' we need to search 'b', that can be found from right part 
+*  
+* Now we have totalSum of array, and 'a'
+* 
+*   totalSum = 2(a+b)
+* =>totalSum = 2a + 2b 
+* =>2b = totalSum - 2a
+* =>b = (totalSum - 2a)/2
+* 
+*
+* So, we need lower bound of 'b' from left part. 
+*
+* at the end just minimize the ans by,
+* ans = min(ans, totalSum - 2(a+b))
+*
+*
+* https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
+****/
+
+
 class Solution {
 public:
     int minimumDifference(vector<int>& nums) {
-        int totalSize = (int)nums.size();
-        int n = totalSize/2;
+        int n = (int)nums.size()/2;
+        vector<int>left[n+1], right[n+1]; // separate two parts and strong their subset sum
         
-        vector<int>left[n+1], right[n+1];
-        
-        for(int mask = 0; mask < (1<<n); mask++){
-            int leftSubSum = 0, rightSubSum = 0;
-            int subSize = 0;
+        // using bitmask for subset sum, atmost 2^n subset possible
+        for(int mask = 0; mask <= (1 << n); i++){
+            int subsetSize = 0, leftSubsetSum = 0, rightSubsetSize = 0;
             
-            for(int bit = 0; bit < n; bit ++){
-                if(mask & (1 << bit)){
-                    subSize++, leftSubSum += nums[bit], rightSubSum += nums[bit + n];
+            // traversing through array
+            for(int bit = 0; bit < n; i++){
+                // if ith bit is set then keep it in answer
+                if(mask & (1<<bit)){
+                    subsetSize++, leftSubsetSum += nums[bit], rightSubsetSum += nums[bit + n];
                 }
             }
-            left[subSize].push_back(leftSubSum);
-            right[subSize].push_back(rightSubSum);
+            
+            //storing subset sum according to their subset size
+            
+            left[subsetSize].push_back(leftSubsetSum);
+            right[subsetSize].push_back(rightSubsetSum);
         }
         
-        int totalSum = 0;
-        for(auto num:nums)totalSum += num;
+        int 
         
         int ans = INT_MAX;
         
-        for(int i = 0; i<=n; i++){
-            vector<int>rightSub = right[n - i];
+        for(int i = 0; i < n; i++){
+            vector<int> rightSub = right[i+n];
             sort(rightSub.begin(), rightSub.end());
- 
-            for(auto &a:left[i]){   
+            
+            for(int &a:left[i]){
                 int b = (totalSum - 2*a)/2;
-                /*
-                     total = 2(a + b) // a = from left part, b = from right part {a+b == n size}
-                  => total = 2a + 2b
-                  => 2b = total - 2a
-                  => b = (total - 2a)/2
-
-                */
-                auto itr = lower_bound(rightSub.begin(), rightSub.end(), b);
-                if(itr != rightSub.end()){
-                    b = *itr;
-                    ans = min(ans, abs(totalSum - 2*(a + b)));
-                }
+                auto it = lower_bound()
             }
         }
+        
         return ans;
     }
 };
