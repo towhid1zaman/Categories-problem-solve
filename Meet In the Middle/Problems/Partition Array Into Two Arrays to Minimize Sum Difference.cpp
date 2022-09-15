@@ -23,7 +23,7 @@
 * ans = min(ans, totalSum - 2(a+b))
 *
 *
-* https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
+*
 ****/
 
 
@@ -34,11 +34,11 @@ public:
         vector<int>left[n+1], right[n+1]; // separate two parts and strong their subset sum
         
         // using bitmask for subset sum, atmost 2^n subset possible
-        for(int mask = 0; mask <= (1 << n); i++){
-            int subsetSize = 0, leftSubsetSum = 0, rightSubsetSize = 0;
+        for(int mask = 0; mask < (1 << n); mask++){
+            int subsetSize = 0, leftSubsetSum = 0, rightSubsetSum = 0;
             
             // traversing through array
-            for(int bit = 0; bit < n; i++){
+            for(int bit = 0; bit < n; bit++){
                 // if ith bit is set then keep it in answer
                 if(mask & (1<<bit)){
                     subsetSize++, leftSubsetSum += nums[bit], rightSubsetSum += nums[bit + n];
@@ -51,17 +51,22 @@ public:
             right[subsetSize].push_back(rightSubsetSum);
         }
         
-        int 
+        int totalSum = 0;
+        for(int num:nums)totalSum += num;
         
         int ans = INT_MAX;
         
-        for(int i = 0; i < n; i++){
-            vector<int> rightSub = right[i+n];
+        for(int i = 0; i <=n; i++){
+            vector<int> rightSub = right[n-i];
             sort(rightSub.begin(), rightSub.end());
             
             for(int &a:left[i]){
                 int b = (totalSum - 2*a)/2;
-                auto it = lower_bound()
+                auto it = lower_bound(rightSub.begin(), rightSub.end(), b);
+                if(it != rightSub.end()){
+                    b = *it;
+                    ans = min( ans, abs(totalSum - 2*(a+b) ));
+                }
             }
         }
         
