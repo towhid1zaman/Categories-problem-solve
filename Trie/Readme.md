@@ -1,4 +1,4 @@
-Efficient String searching algorightm.
+Efficient String searching algorithm.
 
 Problems:
 
