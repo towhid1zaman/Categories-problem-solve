@@ -10,4 +10,6 @@ Problems:
 
 1. Partition Array Into Two Arrays to Minimize Sum Difference
 https://leetcode.com/problems/partition-array-into-two-arrays-to-minimize-sum-difference/
+1755. Closest Subsequence Sum
+https://leetcode.com/problems/closest-subsequence-sum/
 
