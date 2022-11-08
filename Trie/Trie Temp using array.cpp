@@ -36,16 +36,15 @@ void insertTrieWord(char str[]) {
 	cur->isLeaf++;
 }
 
-bool searchTrieWord(char str[]) {
+bool searchTrieWord(char *str) {
 	/*
 	*return word present or not, for word count return as int
 	*/
 	TrieNode *cur = root;
 	while (*str != '\0') {
 		int index = getIndex(*str);
-		if (cur->child[index]) {
-			cur = cur->child[index];
-		}
+		if (cur->child[index] == NULL)return false;
+		cur = cur->child[index];
 		*str++;
 	}
 	return cur->isLeaf > 0;
